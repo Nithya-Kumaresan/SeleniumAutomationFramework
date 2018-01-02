@@ -1,0 +1,30 @@
+//Method overriding
+class Bank {
+    int getInterestRate(int x) {
+        System.out.println("Calling parent method");
+        return x;
+    }
+}
+
+class Bank1 extends Bank{
+    int getInterestRate1(int x) {
+        return x;
+    }
+}
+
+class Bank2 extends Bank{
+    int getInterestRate(int x) {
+        return x;
+    }
+}
+
+
+public class MethodOverriding {
+    public static void main(String[]args)
+    {
+        Bank1 a=new Bank1();
+        Bank2 b=new Bank2();
+        System.out.println(a.getInterestRate(12));
+        System.out.println(b.getInterestRate(13));
+    }
+}
